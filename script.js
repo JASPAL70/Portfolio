@@ -1,43 +1,31 @@
-const navMenu = document.getElementById("nav-menu"),
-  navToggle = document.getElementById("nav-toggle"),
-  navClose = document.getElementById("nav-close");
+const navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close"),
+  navMenu = document.getElementById("nav-menu");
 
+// Open menu
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
   });
 }
 
+// Close menu
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
   });
 }
 
-const sections = document.querySelectorAll("section[id]");
+// Close menu on link click
+const navLink = document.querySelectorAll(".nav-link");
 
-function scrollActive() {
-  const scrollY = window.pageYOffset;
+navLink.forEach((n) =>
+  n.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  })
+);
 
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    const sectionId = current.getAttribute("id");
 
-    const navLink = document.querySelector(`.nav-menu a[href*="#${sectionId}"]`);
-
-    if (navLink) {
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLink.classList.add("active-link");
-      } else {
-        navLink.classList.remove("active-link");
-      }
-    }
-  });
-}
-
-// Activate on scroll
-window.addEventListener("scroll", scrollActive);
 
 
 // qualifi
