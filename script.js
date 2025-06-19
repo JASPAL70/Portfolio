@@ -2,21 +2,21 @@ const navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close"),
   navMenu = document.getElementById("nav-menu");
 
-// Show menu
+// Open menu
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
   });
 }
 
-// Hide menu
+// Close menu on X click
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
   });
 }
 
-// Hide menu on nav link click
+// Close menu on any nav link click
 document.querySelectorAll(".nav-link").forEach((link) =>
   link.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
