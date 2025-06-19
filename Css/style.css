@@ -197,6 +197,12 @@ img {
 .active-link {
   color: var(--first-color);
 }
+.nav-menu,
+.nav-close,
+.nav-toggle {
+  z-index: 9999;
+}
+
 
 
 /* Mobile Styles */
@@ -241,6 +247,9 @@ img {
     color: var(--first-color);
     cursor: pointer;
     z-index: 1001;
+  background-color: red;
+  padding: 5px;
+  border-radius: 4px;
   }
 
   .nav-close:hover {
