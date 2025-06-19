@@ -222,32 +222,40 @@ img {
   }
 
   .nav-menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--body-color);
-    padding: 2rem 1.5rem 4rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 0 0 1.5rem 1.5rem;
-    transition: 0.3s;
-    z-index: 1000;
-  }
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100vw;                 /* Use viewport width */
+  max-width: 100%;              /* Prevent it from expanding too much */
+  background-color: var(--body-color);
+  padding: 2rem 1.5rem 4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 1.5rem 1.5rem;
+  transition: 0.3s;
+  z-index: 100;
+  overflow-x: hidden;           /* Prevent horizontal scroll */
+}
+
 
   .show-menu {
     top: 4rem;
   }
 
-  .nav-close {
-    display: none;
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    font-size: 1.8rem;
-    color: var(--first-color);
-    cursor: pointer;
-    z-index: 1001;
-  }
+.nav-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+  display: none; /* default */
+  z-index: 101;
+}
+
+.show-menu .nav-close {
+  display: block; /* when menu is open */
+}
+
 
   .nav-close:hover {
     color: var(--first-color-alt);
