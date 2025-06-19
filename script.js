@@ -9,20 +9,19 @@ if (navToggle) {
   });
 }
 
-// Close menu on X click
+// Close menu
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
   });
 }
 
-// Close menu on any nav link click
+// Close menu when link is clicked
 document.querySelectorAll(".nav-link").forEach((link) =>
   link.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
   })
 );
-
 
 
 
