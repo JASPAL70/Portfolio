@@ -2,28 +2,27 @@ const navToggle = document.getElementById("nav-toggle"),
   navClose = document.getElementById("nav-close"),
   navMenu = document.getElementById("nav-menu");
 
-// Open menu
+// Show menu
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
   });
 }
 
-// Close menu
+// Hide menu
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
   });
 }
 
-// Close menu on link click
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach((n) =>
-  n.addEventListener("click", () => {
+// Hide menu on nav link click
+document.querySelectorAll(".nav-link").forEach((link) =>
+  link.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
   })
 );
+
 
 
 
