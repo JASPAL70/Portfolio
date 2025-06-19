@@ -227,21 +227,32 @@ img {
   }
 
   .nav-toggle,
+  
+  .nav-close {
+    display: none !important;
+
+ 
+  }
+}
+/* 👇 Default: hidden everywhere (including desktop) */
+.nav-close {
+  display: none;
+}
+
+/* 👇 Mobile only: show the close button */
+@media screen and (max-width: 768px) {
   .nav-close {
     display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--first-color);
   }
 
-  .nav-close {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-  }
-
-  .nav {
-    justify-content: space-between;
+  .nav-close:hover {
+    color: var(--first-color-alt);
   }
 }
 
