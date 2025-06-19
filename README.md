@@ -16,7 +16,7 @@
 ---
 ## 🚀 Live Demo
 
-🔗 [View Portfolio](https://your-portfolio-url.com)
+🔗 [View Portfolio](https://jaspal-beta.vercel.app/)
 
 ---
 
