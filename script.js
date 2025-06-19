@@ -1,29 +1,27 @@
-const navToggle = document.getElementById("nav-toggle"),
-  navClose = document.getElementById("nav-close"),
-  navMenu = document.getElementById("nav-menu");
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
 
-// Open menu
+// Show menu
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
   });
 }
 
-// Close menu
+// Hide menu
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
   });
 }
 
-// Close menu when link is clicked
-document.querySelectorAll(".nav-link").forEach((link) =>
+// Hide menu on link click
+document.querySelectorAll(".nav-link").forEach(link =>
   link.addEventListener("click", () => {
     navMenu.classList.remove("show-menu");
   })
 );
-
-
 
 
 // qualifi
