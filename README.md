@@ -51,7 +51,7 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/your-portfolio.git
+git clone https://github.com/JASPAL70/Portfolio
 
 # Navigate into the project directory
 cd your-portfolio
