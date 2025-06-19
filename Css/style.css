@@ -1073,37 +1073,6 @@ img {
   }
 }
 
-/* Contact Section */
-.contact {
-  padding: 4rem 0;
-  background-color: hsl(var(--hue-color), 8%, 98%);
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-  color: hsl(var(--hue-color), 8%, 15%);
-  margin-bottom: 0.5rem;
-}
-
-.section-subtitle {
-  display: block;
-  text-align: center;
-  font-size: 1rem;
-  color: hsl(var(--hue-color), 8%, 40%);
-  margin-bottom: 3rem;
-}
-
-/* Grid container */
-.contact-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 768px;
-  margin: 0 auto;
-  gap: 2rem;
-}
-
 /* ================= Contact Section ================= */
 .contact {
   padding: 4rem 0;
@@ -1111,6 +1080,7 @@ img {
   transition: background-color 0.3s ease;
 }
 
+/* Titles */
 .section-title {
   font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
@@ -1134,33 +1104,37 @@ img {
   max-width: 768px;
   margin: 0 auto;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
-/* Contact Info Card */
+/* Card */
 .contact-info {
   background-color: var(--container-color);
   border-radius: 1rem;
-  padding: 1.5rem 19rem;
+  padding: 1.5rem 19rem; /* Keep this for desktop */
   display: flex;
   align-items: center;
   gap: 1.5rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Hover */
 .contact-info:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
-/* Icon Styling */
+/* Icon */
 .contact-icon {
   font-size: 1.75rem;
   color: var(--first-color);
   min-width: 32px;
 }
 
-/* Contact Text */
+/* Text */
 .contact-title {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
@@ -1178,19 +1152,27 @@ img {
 .contact-subtitle:hover {
   color: var(--first-color-alt);
 }
-/* Wrapper for contact items */
+
+/* Column wrapper */
 .contact-column {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* space between the cards */
+  gap: 1.5rem;
 }
 
-/* Responsive (Optional Enhancement) */
+/* Responsive for tablets/desktops */
 @media screen and (min-width: 768px) {
   .contact-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contact-info {
+    flex-direction: column;
+    padding: -1.5rem; /* Compact padding */
+    text-align: center;
+  }
 }
+
 /* ===================== QUALIFICATION TIMELINE ===================== */
 .qualification-timeline {
   position: relative;
