@@ -1,50 +1,59 @@
-# 🌐 Personal Developer Portfolio
+<h1 align="center">✨ Jaspal's Developer Portfolio</h1>
 
-![Portfolio Banner](https://your-screenshot-url.com/banner.png)
+<p align="center">
+  <b>A modern, dark/light-themed, responsive portfolio website showcasing my skills in Web Development, AI/ML, and Quantum Computing.</b><br/>
+  Built with love using React.js, TailwindCSS, and JavaScript.
+</p>
 
-Welcome to my personal developer portfolio! This responsive and interactive site showcases my technical skills, featured projects, and career journey in a clean, dark/light-themed modern UI built with cutting-edge web technologies.
+<p align="center">
+  <a href="https://your-live-site.com"><img alt="Live" src="https://img.shields.io/badge/Live-Demo-blue?style=flat-square&logo=vercel" /></a>
+  <a href="https://github.com/yourusername/portfolio"><img alt="GitHub stars" src="https://img.shields.io/github/stars/yourusername/portfolio?style=flat-square" /></a>
+  <a href="https://linkedin.com/in/yourlinkedin"><img alt="LinkedIn" src="https://img.shields.io/badge/Connect-LinkedIn-blue?style=flat-square&logo=linkedin" /></a>
+</p>
 
 ---
 
-## 🚀 Live Demo
+## 📸 Preview
 
-🔗 [View Portfolio](https://your-portfolio-url.com)
+<p align="center">
+  <img src="https://your-screenshot-url.com/homepage-preview.png" alt="Portfolio Screenshot" width="800"/>
+</p>
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-- 🌙 Dark & Light Mode Toggle
-- 💬 Interactive Sections (About, Skills, Projects, Contact)
-- 🧠 AI/ML & Quantum Tech Stack Highlights
-- 🎯 Smooth Scroll Navigation
-- 🖼️ 3D and Vector Design Elements
-- 📱 Fully Responsive (Mobile + Desktop)
-- 📥 Contact Form with EmailJS Integration
+- 🎨 **Dark/Light Mode** toggle with local storage memory
+- 🧠 Highlights in **AI, Machine Learning & Quantum Computing**
+- 📱 Fully **Responsive** across all screen sizes
+- ⚡ Smooth animations with **Framer Motion**
+- 💬 Functional **Contact Form** with EmailJS
+- 🖼️ Vector illustrations & Lottie animations
+- 🌐 SEO-optimized for search engines
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category          | Technologies                                |
-|------------------|---------------------------------------------|
-| Frontend         | `HTML`, `CSS`, `JavaScript`, `React.js`     |
-| Styling          | `Tailwind CSS`, `CSS Variables`, `Framer Motion` |
-| Interactivity    | `Vanilla JS`, `EmailJS`, `FontAwesome`      |
-| Deployment       | `Vercel` / `GitHub Pages` / `Netlify`       |
-| Assets           | `Lottie Animations`, `3D Models`, `SVG`     |
-
----
-
-## 🖼️ Screenshots
-
-### 💻 Desktop View
-![Desktop Screenshot](https://your-screenshot-url.com/desktop.png)
-
-### 📱 Mobile View
-![Mobile Screenshot](https://your-screenshot-url.com/mobile.png)
+| Frontend        | Styling            | Animations        | Utilities       |
+|-----------------|--------------------|-------------------|-----------------|
+| React.js        | Tailwind CSS       | Framer Motion     | EmailJS         |
+| HTML5 + CSS3    | Styled Components  | LottieFiles       | Font Awesome    |
+| JavaScript (ES6)| CSS Variables      | React Icons       | Google Fonts    |
 
 ---
 
 ## 📁 Folder Structure
 
+```bash
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── README.md
