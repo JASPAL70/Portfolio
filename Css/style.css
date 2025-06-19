@@ -239,7 +239,7 @@ img {
   }
 
   .nav-close {
-    display: block;
+    display: none;
     position: absolute;
     top: 1rem;
     right: 1.5rem;
@@ -251,6 +251,13 @@ img {
 
   .nav-close:hover {
     color: var(--first-color-alt);
+  }
+  .show-menu ~ .nav-btns .nav-toggle {
+    display: none !important;
+  }
+
+  .show-menu .nav-close {
+    display: block !important;
   }
 }
 
