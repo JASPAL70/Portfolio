@@ -23,20 +23,22 @@
 
 ## 🚀 Features
 
-🚀 Modern UI/UX with responsive dark/light mode and theme customization
-⚛️ Built with React.js, styled using Tailwind CSS & CSS variables
-📱 Fully responsive & accessible across all devices and screen readers
-📂 Dynamic sections for Projects, Experience, AI/ML Skills, and Timeline
-🖇️ Direct links to LinkedIn, Twitter, GitHub, and resume download
+-🚀 Modern UI/UX with responsive dark/light mode and theme customization
+-⚛️ Built with React.js, styled using Tailwind CSS & CSS variables
+-📱 Fully responsive & accessible across all devices and screen readers
+-📂 Dynamic sections for Projects, Experience, AI/ML Skills, and Timeline
+-🖇️ Direct links to LinkedIn, Twitter, GitHub, and resume download
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Frontend        | Styling            
-| React.js        | Tailwind CSS
-| HTML5 + CSS3    | Styled Components  
-| JavaScript (ES6)| CSS Variables      
+| Frontend             | Styling              |
+|----------------------|----------------------|
+| React.js             | Tailwind CSS         |
+| HTML5 + CSS3         | Styled Components    |
+| JavaScript (ES6+)    | CSS Variables        |
+
 
 ---
 
