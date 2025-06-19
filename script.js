@@ -14,33 +14,31 @@ if (navClose) {
   });
 }
 
-// ======= 📱 Mobile Navbar Menu Toggle =======
+const sections = document.querySelectorAll("section[id]");
 
-// Get DOM elements
-// (Already declared above)
+function scrollActive() {
+  const scrollY = window.pageYOffset;
 
-// Show the mobile menu when toggle icon is clicked
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.add("show-menu");
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    const sectionId = current.getAttribute("id");
+
+    const navLink = document.querySelector(`.nav-menu a[href*="#${sectionId}"]`);
+
+    if (navLink) {
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLink.classList.add("active-link");
+      } else {
+        navLink.classList.remove("active-link");
+      }
+    }
   });
 }
 
-// Hide the mobile menu when close icon (X) is clicked
-if (navClose) {
-  navClose.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
-}
+// Activate on scroll
+window.addEventListener("scroll", scrollActive);
 
-//  Hide the mobile menu when any nav link is clicked
-const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach(link => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("show-menu");
-  });
-});
 
 // qualifi
 const tabs = document.querySelectorAll("[data-target]"),
@@ -65,29 +63,7 @@ tabs.forEach((tab) => {
 
 
 
-//scroll section active link
-const sections = document.querySelectorAll("section[id]");
-
-function scrollActive() {
-  const scrollY = window.pageYOffset;
-
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
-
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav-menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
-    } else {
-      document
-        .querySelector(".nav-menu a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
-    }
-  });
-}
-window.addEventListener("scroll", scrollActive);
+// (Removed duplicate scroll section active link and scrollActive function)
 
 // change bg header
 function scrollHeader() {
