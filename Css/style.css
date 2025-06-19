@@ -205,16 +205,24 @@ img {
 @media screen and (max-width: 767px) {
   .nav-menu {
     position: fixed;
-    bottom: -100%;
+    top: 0; /* <-- bring it to top */
     left: 0;
     width: 100%;
+    height: 100vh;
     background-color: var(--body-color);
     padding: 2rem 1.5rem 4rem;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 1.5rem 1.5rem 0 0;
-    transition: 0.3s;
+    border-radius: 0 0 1.5rem 1.5rem;
+    transition: 0.3s ease-in-out;
+    z-index: 999; /* <-- ensure it's above everything */
+    transform: translateY(100%);
+  }
+
+  .show-menu {
+    transform: translateY(0%);
   }
 }
+
 
 .nav-list {
   grid-template-columns: repeat(3, 1fr);
@@ -248,10 +256,6 @@ img {
 }
 .nav-close:hover {
   color: var(--first-color-alt);
-}
-
-.show-menu {
-  bottom: 0;
 }
 
 .active-link {

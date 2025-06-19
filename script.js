@@ -14,15 +14,33 @@ if (navClose) {
   });
 }
 
-// remove menu mobile
-const navLink = document.querySelectorAll(".nav-link");
+// ======= 📱 Mobile Navbar Menu Toggle =======
 
-function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
-  navMenu.classList.remove("show-menu");
+// Get DOM elements
+// (Already declared above)
+
+// Show the mobile menu when toggle icon is clicked
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
 }
 
-navLink.forEach((n) => n.addEventListener("click", linkAction));
+// Hide the mobile menu when close icon (X) is clicked
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
+
+//  Hide the mobile menu when any nav link is clicked
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+});
 
 // qualifi
 const tabs = document.querySelectorAll("[data-target]"),
