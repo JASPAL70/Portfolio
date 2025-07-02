@@ -411,7 +411,7 @@ img {
 
 .about-img {
   width: 220px; /* Slightly bigger for better visibility */
-  border-radius: 50%; /* Circular shape */
+  border-radius: 20px; /* Circular shape */
   object-fit: cover; /* Ensures the image fills the space nicely */
   display: block;
   margin: 0 auto; /* Centers the image */
